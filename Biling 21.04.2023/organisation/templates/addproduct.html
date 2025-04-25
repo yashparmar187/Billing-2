@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <style>
+        input[type = text]
+        {
+            width: 120px;
+        }
+        input[type = number]
+        {
+            width: 60px;
+        }
+    </style>
+    <!-- Addition script -->
+    <script>
+
+        function calc(){
+            var price = parseFloat(document.getElementById('id_Price').value);
+            var qty = parseFloat(document.getElementById('id_Qty').value);
+            var sub_price = (price * qty)
+            document.getElementById('id_Total').value = Final_Total
+
+        }
+
+</script>
+    
+    <!-- ----------------------------------- -->
+</head>
+
+<div class="span12" style="margin-top:10px;">
+    <div class="widget-header"> <i class="fa fa-th-list"></i>
+        <h3>Product Items</h3>
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+    
+    <div class="widget-content">
+        <!-- {{ data.Invoice }} -->
+        {% comment %} Invoice No: 
+        <select name="Invoice">
+            {% for cust1 in invo %}
+            <option value="{{ cust1 }}" >
+                {{ cust1 }}
+            </option>
+            {% endfor %}
+          </select> {% endcomment %}
+
+        <table class="invoice-product-items-table table table-striped table-bordered 
+                                                                 " >
+            <thead>
+                <tr>
+                    <th><center>Product name </center></th>
+                    <th><center>Product Qantity</center> </th>
+                
+                    
+                </tr> 
+            </thead>
+            <tbody>
+            
+            <tr>
+                   
+                    <td>
+                      <input type="text" name="Product_name" id="id_Product_name" placeholder="Product name">
+                    </td>
+                   
+                    <td>
+                        <input type="number" name="Qty" id="id_Qty" placeholder="Quantity">
+                    </td>
+                    
+                    
+                </tr>
+            </tbody>
+                
+          
+        </table>
+        
+            <div class="action-btn-container">
+                
+            </div><!--/save&&saveandpdf -->
+            <div class="action-btn-container">
+                <button onclick="calc();" class="btn btn-primary" style="float:right;margin-top:10px;background-color: firebrick; margin-right: 10px "><i class="fa fa-save"></i>Add</button>
+                </div>
+        </div>
+        </div>
+    </div><!---widget content terminated -->
+</form>
+</div>
+
+{% endblock %}

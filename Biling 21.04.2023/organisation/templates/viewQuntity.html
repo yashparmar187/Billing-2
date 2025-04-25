@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .cardquintity {
+                background-color: #f9f6f1;
+            }
+            .headerpor{
+                background-color: gainsboro;
+            }
+            .rows {
+                width: 80%;
+                margin: auto;
+                background-color: #f9f6f1;
+            }
+
+            .column-8 {
+                width: 70%;
+                float: left;
+                margin-top: 10px;
+                background-color: #f9f6f1;
+                padding: 20px 0px 20px 0px;
+            }
+
+            .column-4 {
+                width: 30%;
+                float: left;
+                margin-top: 10px;
+                background-color: #f9f6f1;
+                padding: 20px 0px 20px 0px;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="rows">
+            <div class="cardquintity">
+                <div class="column-4" style="background-color: gainsboro;"><h2 >Product Name</h2></div>
+                <div class="column-4" style="background-color: gainsboro;"><h2 >Product Quantity</h2></div>
+                <div class="column-4" style="background-color: gainsboro;"><h2 >action</h2></div>
+                {% for i in data %}
+                <div class="column-4">{{i.Product_name}}</div>
+                <div class="column-4">{{i.Qty}}</div>
+                <div class="column-4"><a href="{% url 'updateaddProductForm' i.id %}">update</a></div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+
+    </html>
+    {% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for i in prod_data %}
+    {{ i.Product_name }}
+    <a href="{% url 'ProdUp' i.id %}">Update</a>
+    <a href="{% url 'ProdDel' i.id %}">Delete</a>
+{% endfor %}
+
+{% endblock %}
