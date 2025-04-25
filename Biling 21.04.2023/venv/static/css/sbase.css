@@ -1,0 +1,110 @@
+/* Base Styles for Ministore Seller Dashboard */
+:root {
+  --primary-color: #72AEC8;
+  --text-color: #333333;
+  --light-bg: #f9f9f9;
+  --dark-bg: #212529;
+  --footer-text: #bbbbbb;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4A90E2;
+}
+
+/* Header */
+.site-header {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: #ffffff;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color);
+  margin-left: 15px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-bg);
+  color: var(--footer-text);
+}
+
+footer h5 {
+  margin-bottom: 1em;
+}
+
+footer ul {
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5em;
+}
+
+footer ul li a {
+  color: var(--footer-text);
+}
+
+footer ul li a:hover {
+  color: var(--primary-color);
+}
+
+footer .social-links a {
+  margin-right: 10px;
+  color: var(--footer-text);
+  font-size: 18px;
+}
+
+footer .social-links a:hover {
+  color: var(--primary-color);
+}
+
+footer .row:last-child p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+footer .row:last-child img {
+  max-height: 30px;
+  margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .col-md-3 {
+    margin-bottom: 2em;
+  }
+}

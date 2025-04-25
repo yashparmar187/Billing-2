@@ -1,0 +1,109 @@
+/* Dashboard Specific Styles */
+.product-section {
+  background: var(--light-bg);
+  padding: 2em 0;
+}
+
+h2 {
+  font-family: 'Jost', sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.lead {
+  font-size: 1.2em;
+  color: #666666;
+}
+
+.product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.card-text {
+  font-size: 1em;
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #4A90E2;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-color);
+  color: #ffffff;
+}
+
+.table {
+  background: #ffffff;
+}
+
+.table th {
+  background: var(--light-bg);
+  color: var(--text-color);
+}
+
+canvas#salesChart {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
